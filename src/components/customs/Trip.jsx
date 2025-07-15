@@ -14,8 +14,7 @@ function Trip() {
   const location = tripLocation || contextLocation || "N/A";
 
   // Utility function for placeholder image fallback
-  const safeImage = (url) =>
-    url && url.startsWith("http") ? url : "https://aitrip.tubeguruji.com/placeholder.jpg";
+
 
   return (
     <div className="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-36 max-w-screen-xl mx-auto mt-10 mb-20">
@@ -52,7 +51,7 @@ function Trip() {
               className="bg-white rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-transform duration-300 p-4 cursor-pointer"
             >
               <img
-                src={safeImage(hotel.hotelImageURL)}
+                src='https://aitrip.tubeguruji.com/placeholder.jpg'
                 alt={hotel.hotelName}
                 className="w-full h-[180px] object-cover rounded-lg mb-3"
               />
@@ -104,7 +103,7 @@ function Trip() {
                     >
                       <div className="text-sm font-semibold text-orange-600">{timeSlot}</div>
                       <img
-                        src={safeImage(activity.placeImageURL)}
+                        src='https://aitrip.tubeguruji.com/placeholder.jpg'
                         alt={activity.placeName}
                         className="rounded-lg w-full h-[180px] object-cover"
                       />
